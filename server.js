@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import httpProxy from 'http-proxy';
 import bundle from './server/bundle.js';
+import api from './server/api/api.router';
 
 var proxy = httpProxy.createProxyServer();
 var app = express();
@@ -33,6 +34,8 @@ if (!isProduction) {
 proxy.on('error', function(e) {
   console.log('Could not connect to proxy, please try again...');
 });
+
+app.use('/api', api());
 
 // And run the server
 app.listen(port, () => {
