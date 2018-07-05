@@ -6,3 +6,4 @@ coverage
 .idea
 
 dist
+/treinamento-web.db
