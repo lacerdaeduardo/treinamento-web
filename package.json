@@ -21,7 +21,6 @@
     "babel-preset-stage-3": "^6.24.1",
     "babel-register": "^6.26.0",
     "css-loader": "^0.28.11",
-    "express": "^4.16.3",
     "file-loader": "^1.1.11",
     "mocha": "^5.2.0",
     "nodemon": "^1.17.5",
@@ -29,9 +28,15 @@
   },
   "dependencies": {
     "babel-loader": "^7.1.4",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-validator": "^5.2.0",
     "fundamental-ui": "^1.0.0",
     "http-proxy": "^1.17.0",
     "loadash": "^1.0.0",
+    "lokijs": "^1.5.5",
+    "request": "^2.87.0",
+    "validator": "^10.4.0",
     "webpack": "^4.14.0",
     "webpack-dev-server": "^3.1.4"
   }
