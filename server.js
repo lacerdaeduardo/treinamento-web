@@ -3,6 +3,7 @@ import path from 'path';
 import httpProxy from 'http-proxy';
 import bundle from './server/bundle.js';
 import api from './server/api/api.router';
+import bodyParser from 'body-parser';
 
 var proxy = httpProxy.createProxyServer();
 var app = express();
@@ -13,6 +14,12 @@ var publicPath = path.resolve(__dirname, 'public');
 
 // We point to our static assets
 app.use(express.static(publicPath));
+
+// parse application/json
+app.use(bodyParser.json());
+
+// create application/x-www-form-urlencoded parser
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // We only want to run the workflow when not in production
 if (!isProduction) {
