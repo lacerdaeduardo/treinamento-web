@@ -8,8 +8,8 @@ export default () => {
     // PRODUCT ROUTES
     router.get('/products', productsController.getProducts);
     router.get('/products/:product_id', productsController.getProduct);
-    router.post('/products', productsController.saveProduct);
-    router.put('/products/:product_id', productsController.updateProduct);
+    router.post('/products', productsController.schema, productsController.saveProduct);
+    router.put('/products/:product_id', productsController.schema, productsController.updateProduct);
     router.delete('/products/:product_id', productsController.deleteProduct);
 
     return router;
