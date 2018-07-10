@@ -12,8 +12,15 @@ var isProduction = process.env.NODE_ENV === 'production';
 var port = isProduction ? process.env.PORT : 3000;
 var publicPath = path.resolve(__dirname, 'public');
 
+app.set("view engine", "pug");
+app.set("views", path.join(publicPath, "views"));
+
 // We point to our static assets
 app.use(express.static(publicPath));
+
+app.get("/", (req, res) => {
+  res.render("index");
+});
 
 // parse application/json
 app.use(bodyParser.json());
