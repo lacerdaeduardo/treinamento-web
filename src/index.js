@@ -1,15 +1,13 @@
 import _ from 'lodash';
+import $ from 'jquery';
+
 import './css/style.css';
 import 'fundamental-ui/dist/fundamental-ui.css';
 
-function component() {
-    var element = document.createElement('div');
-  
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello');
+import './js/customscripts';
 
-    return element;
-  }
-  
-  document.body.appendChild(component());
+function component() {
+    console.info('Started app with Webpack');
+}
+
+component();
