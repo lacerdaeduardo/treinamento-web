@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        title #{title}
+        block scripts
+        link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    body
+        - var title = 'Index'
+        - var productName = 'treinamento-web node + fundamental-ui'
+        .fd-ui.fd-ui--fundamental
+            .fd-ui__header
+                include navbar
+            .fd-ui__app
+                .fd-app
+                    main.fd-app__main
+                        block content
+            .fd-ui__footer
+                include footer
+    script(type='text/javascript' src='build/bundle.js')
+    
