@@ -1,0 +1,36 @@
+extends ../templates/layout.pug
+
+block content
+    .fd-container.fd-container--centered
+        .fd-action-bar
+            .fd-action-bar__header
+                h1.fd-action-bar__title Produtos
+                p.fd-action-bar__description Lista de Produtos
+            .fd-action-bar__actions
+                a(href="/produtos-add")
+                    button.fd-button--toolbar.fd-button--l.sap-icon--add-product Adicionar     
+        table.fd-table
+            thead
+                td
+                   |ID
+                td
+                   |Produto
+                td
+                    | Valor
+                td
+                   |Editar
+                td
+                   |Remover
+            tbody      
+                each val in [1, 2, 3, 4, 5]           
+                    tr                    
+                        td
+                            |Produto #{val}
+                        td
+                            |Descrição #{val}
+                        td
+                            |#{val}
+                        td
+                            span.sap-icon--edit
+                        td
+                            span.sap-icon--decline

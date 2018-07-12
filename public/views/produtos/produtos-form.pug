@@ -1,0 +1,27 @@
+extends ../templates/layout.pug
+
+block content
+    .fd-section
+        .fd-container.fd-container--centered
+            .fd-action-bar
+                .fd-action-bar__back
+                    button.fd-button--secondary.fd-button--compact.sap-icon--nav-back
+                .fd-action-bar__header
+                    h1.fd-action-bar__title Produtos
+                    p.fd-action-bar__description Novo produto
+        .fd-container.fd-container--centered.fd-has-margin-base
+            .fd-form__set
+                .fd-form__item
+                    label.fd-form__label.is-required(for=txtDescricao) Descrição
+                    input.fd-form__control.fd-has-background-color-background-2(type='text' id='txtDescricao' placeholder='Descrição...')
+            .fd-form__set
+                .fd-form__item
+                    label.fd-form__label.is-required(for=txtValor) Valor
+                    input.fd-form__control.fd-has-background-color-background-2(type='number' id='txtValor' placeholder='R$ Valor')
+            .fd-form__set
+                .fd-form__item
+                    button.fd-has-float-right.fd-button--positive(type='submit') Submit
+                                  
+    
+        
+           
