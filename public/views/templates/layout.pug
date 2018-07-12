@@ -3,12 +3,14 @@ html
     head
         meta(charset='UTF-8')
         title #{title}
-        block scripts
+        link(rel='shortcut icon' type='image/x-icon' href='/favicon.ico')
+        block scripts        
         link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
     body
         .fd-ui.fd-ui--fundamental
             .fd-ui__header
-                include navbar
+                .fd-container.fd-container--centered
+                    include navbar
             .fd-ui__app
                 .fd-app
                     main.fd-app__main
